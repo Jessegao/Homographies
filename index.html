@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cs194hw6</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="project-6a-image-warping-and-mosaicing">Project 6A: Image Warping and Mosaicing</h1>
+<p>Author:</p>
+<p>Jesse Gao, cs194-26-afi</p>
+<h3 id="project-overview">Project Overview</h3>
+<p>Creating image warps and mosaics.</p>
+<h3 id="shoot-the-pictures">Shoot the Pictures</h3>
+<p>Ideally the photos taken should be taken with the same camera with a stable axis of rotation. The following were pictures of my apartment room captured by my phone on a swivel stand.</p>
+<p><img src="images/left.jpg" alt="images/left.jpg"><img src="images/right.jpg" alt="images/right.jpg"></p>
+<h3 id="recover-homographies">Recover Homographies</h3>
+<p>In the next part of the project, we label the point correspondences in the images and compute the transformation.</p>
+<h3 id="image-warping">Image Warping</h3>
+<p>Now that we have the homography, we can transform an image so that its corresponding points match some other set of corresponding points. I used numpy’s linear algebra functions to apply inverse transformations for the warped image pixels.</p>
+<h4 id="floor-art">Floor art</h4>
+<p><img src="images/road.jpg" alt="" width="300"><img src="images/roadrectify.jpg" alt="" width="300"></p>
+<h4 id="tiles">Tiles[]</h4>
+<p><img src="images/tile.jpg" alt="" width="300"><img src="images/tilerectify.jpg" alt="" width="300"></p>
+<h3 id="mosaic">Mosaic</h3>
+<p>Using corresponding points, we can shift an image to “match” another and create a combination of both.</p>
+<h5 id="original-images">Original Images</h5>
+<p><img src="images/left.jpg" alt="images/left.jpg"><img src="images/right.jpg" alt="images/right.jpg"></p>
+<h4 id="apartment-living-room">Apartment Living Room</h4>
+<p><img src="images/leftrightmosaic.jpg" alt=""></p>
+<h4 id="hand-cropped-version-">Hand Cropped Version <img src="images/cropped.jpg" alt=""></h4>
+<h3 id="lessons-learned">Lessons Learned</h3>
+<p>In this project, I learned about the mathematics behind how to compute a homography, how to use that homography to warp an image. Overall it was a very challenging project because of all the small errors that could happen when computing the inverse transform from the original image’s pixels to the target image’s pixels.</p>
+</div>
+</body>
+
+</html>
